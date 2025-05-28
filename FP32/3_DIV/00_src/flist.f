@@ -1,0 +1,9 @@
+00_src/D_flipflop.sv
+00_src/Div_f_32bit.sv
+00_src/Divider_frac.sv
+00_src/Down_counter_6bit.sv
+00_src/Full_Adders.sv
+00_src/MUX_2X1_32bit.sv
+00_src/register_32bit.sv
+00_src/Single_MUX.sv
+00_src/synth_wrapper.v
