@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at singlecycle.sv(14): object "operand_a" differs only in case from object "Operand_A" in the same scope File: I:/OneDrive/Desktop/Basic_processor/Single_cycle/MAIN_PROCESSOR/test/singlecycle.sv Line: 14
+Info (10281): Verilog HDL Declaration information at singlecycle.sv(14): object "operand_b" differs only in case from object "Operand_B" in the same scope File: I:/OneDrive/Desktop/Basic_processor/Single_cycle/MAIN_PROCESSOR/test/singlecycle.sv Line: 14

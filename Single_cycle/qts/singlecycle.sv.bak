@@ -1,0 +1,65 @@
+module singlecycle(
+		input  logic clk_i, rst_ni, 
+		input  logic [31:0] io_sw_i,
+		output logic pc_debug_o,
+		output logic [31:0] io_lcd_o, io_ledg_o, io_ledr_o,
+		output logic [32:0] io_hex0_o, io_hex1_o, io_hex2_o, io_hex3_o,
+		output logic [31:0] io_hex4_o, io_hex5_o, io_hex6_o, io_hex7_o 
+);
+
+// Controller
+wire logic br_sel, br_unsigned, rd_wren, mem_wren, mem_byte, mem_halfword;
+wire logic op_a_sel, op_b_sel, zero_op_a;
+wire logic [3:0] alu_op;
+wire logic [1:0] wb_sel;
+ctrl_unit        (.instr(instr), .br_less(br_less), .br_equal(br_equal),
+                  .br_sel(br_sel), .br_unsigned(br_unsigned),
+                  .rd_wren(rd_wren), .mem_wren(mem_wren), .mem_byte(mem_byte), .mem_halfword(mem_halfword),
+                  .op_a_sel(op_a_sel), .op_b_sel(op_b_sel), .zero_op_a(zero_op_a), .alu_op(alu_op), .wb_sel(wb_sel) );
+
+/////////////// Instuction Fetch ///////////////
+wire logic  [31:0] nxt_PC, PC, instr, imm, PC_four;
+Mux_2X1_32bit	 PC_sel  (.A(PC_four), .B(alu_data),  .Sel(br_sel), .I(nxt_PC) );
+Register_32bit          (.D(nxt_PC),  .En(1'b1), .clk(clk_i), .reset(rst_ni), .Q(PC) );
+instr_ROM               (.clk_i(clk_i), .PC(PC), .instr(instr) );
+Full_Adder_32bit  PC_a4 (.A(PC), .B(32'b00000000000000000000000000000100), .Invert_B(1'b0),  .C_in(1'b0), .Sum(PC_four) );
+
+/////////////// Instruction Decode ///////////////
+wire logic rd_wren;
+wire logic [4:0] rs1, rs2, rd;
+wire logic [31:0] rs1_data, rs2_data, rd_data;
+assign rs1 = instr[19:15];
+assign rs2 = instr[24:20];
+assign rd  = instr[11:7];
+
+regfile 		  (.clk_i(clk_i), .rst_ni(rst_ni), .rd_wren(rd_wren),
+				   .rs1_addr(rs1), .rs2_addr(rs2), .rd_addr(rd),
+				   .rd_data(rd_data), .rs1_data(rs1_data), .rs2_data(rs2_data) );
+
+imm_gen       (.instr(instr), .imm(imm) );
+
+Mux_2X1_32bit	 Operand_A (.A(rs1_data), .B(PC),  .Sel(op_a_sel), .I(operand_a) );
+Mux_2X1_32bit	 Operand_B (.A(rs2_data), .B(imm), .Sel(op_b_sel), .I(operand_b) );
+
+
+/////////////// Execute ///////////////
+wire logic [31:0] operand_a, operand_b, alu_data;
+wire logic br_unsigned, br_less, br_equal;
+brcomp			  (.rs1_data(rs1_data), .rs2_data(rs2_data), .br_unsigned(br_unsigned), . br_less(br_less), .br_equal(br_equal) );
+
+ALU				  (.operand_a(operand_a), .operand_b(operand_b), .alu_op(alu_op), .alu_data(alu_data) );
+
+
+/////////////// Memory Access ////////////
+wire logic [31:0] ld_data;
+lsu				  (.clk_i(clk_i), .rst_ni(rst_ni), .st_en(mem_wren),
+                  .ld_halfword(mem_halfword), ld_byte(mem_byte), .addr(alu_data[11:0]), .st_data(rs2_data), .ld_data(ld_data),
+                  .io_sw(io_sw_i), .io_lcd(io_lcd_o), .io_ledg(io_ledg_o), .io_ledr(io_ledr_o),
+                  .io_hex0(io_hex0_o), .io_hex1(io_hex1_o), .io_hex2(io_hex2_o), .io_hex3(io_hex3_o),
+                  .io_hex4(io_hex4_o), .io_hex5(io_hex5_o), .io_hex6(io_hex6_o), .io_hex7(io_hex7_o)  );
+
+////////////// Write Back ////////////////
+
+Mux_4X1_32bit     (.Sel(wb_sel), .I0(alu_data), .I1(ld_data), .I2(PC_four), .I3(PC_four), .OUT(rd_data) );
+
+endmodule
