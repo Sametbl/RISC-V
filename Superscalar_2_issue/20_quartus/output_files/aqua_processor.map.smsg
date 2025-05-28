@@ -1,0 +1,4 @@
+Info (10281): Verilog HDL Declaration information at forwarding_unit.sv(195): object "rs1_instr1" differs only in case from object "RS1_Instr1" in the same scope File: I:/OneDrive/Desktop/CA203/new3/00_src/forwarding_unit.sv Line: 195
+Info (10281): Verilog HDL Declaration information at forwarding_unit.sv(195): object "rs2_instr1" differs only in case from object "RS2_Instr1" in the same scope File: I:/OneDrive/Desktop/CA203/new3/00_src/forwarding_unit.sv Line: 195
+Info (10281): Verilog HDL Declaration information at forwarding_unit.sv(196): object "rs1_instr2" differs only in case from object "RS1_Instr2" in the same scope File: I:/OneDrive/Desktop/CA203/new3/00_src/forwarding_unit.sv Line: 196
+Info (10281): Verilog HDL Declaration information at forwarding_unit.sv(196): object "rs2_instr2" differs only in case from object "RS2_Instr2" in the same scope File: I:/OneDrive/Desktop/CA203/new3/00_src/forwarding_unit.sv Line: 196

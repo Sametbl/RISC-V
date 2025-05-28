@@ -1,0 +1,504 @@
+(
+    show_hierarchy: None,
+    show_menu: None,
+    show_ticks: None,
+    show_toolbar: None,
+    show_tooltip: None,
+    show_overview: None,
+    show_statusbar: None,
+    align_names_right: None,
+    show_variable_indices: None,
+    show_variable_direction: None,
+    show_empty_scopes: None,
+    show_parameters_in_scopes: None,
+    waves: Some((
+        source: File("wave.vcd"),
+        format: Fst,
+        active_scope: Some(WaveScope((
+            strs: [
+                "regfile_tb",
+            ],
+        ))),
+        displayed_items_order: [
+            (8),
+            (7),
+            (26),
+            (10),
+            (12),
+            (23),
+            (30),
+            (11),
+            (13),
+            (24),
+            (31),
+            (15),
+            (19),
+            (16),
+            (20),
+            (27),
+            (17),
+            (21),
+            (18),
+            (22),
+            (28),
+            (2),
+            (4),
+            (3),
+            (5),
+            (29),
+            (9),
+            (6),
+        ],
+        displayed_items: {
+            (30): Divider((
+                color: None,
+                background_color: None,
+                name: None,
+            )),
+            (26): Divider((
+                color: None,
+                background_color: None,
+                name: None,
+            )),
+            (15): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "regfile_tb",
+                        ],
+                    ),
+                    name: "rs1_addr_instr1",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "rs1_addr_instr1 [4:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+            )),
+            (28): Divider((
+                color: None,
+                background_color: None,
+                name: None,
+            )),
+            (11): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "regfile_tb",
+                        ],
+                    ),
+                    name: "rd_addr_instr2",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "rd_addr_instr2 [4:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+            )),
+            (29): Divider((
+                color: None,
+                background_color: None,
+                name: None,
+            )),
+            (18): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "regfile_tb",
+                        ],
+                    ),
+                    name: "rs1_data_instr2",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "rs1_data_instr2 [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+            )),
+            (2): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "regfile_tb",
+                        ],
+                    ),
+                    name: "expected_rs1_data_instr1",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "expected_rs1_data_instr1 [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+            )),
+            (31): Divider((
+                color: None,
+                background_color: None,
+                name: None,
+            )),
+            (27): Divider((
+                color: None,
+                background_color: None,
+                name: None,
+            )),
+            (9): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "regfile_tb",
+                        ],
+                    ),
+                    name: "pass_count",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "pass_count [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+            )),
+            (8): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "regfile_tb",
+                        ],
+                    ),
+                    name: "i_rst_n",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "i_rst_n",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+            )),
+            (10): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "regfile_tb",
+                        ],
+                    ),
+                    name: "rd_addr_instr1",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "rd_addr_instr1 [4:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+            )),
+            (3): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "regfile_tb",
+                        ],
+                    ),
+                    name: "expected_rs1_data_instr2",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "expected_rs1_data_instr2 [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+            )),
+            (13): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "regfile_tb",
+                        ],
+                    ),
+                    name: "rd_data_instr2",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "rd_data_instr2 [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+            )),
+            (5): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "regfile_tb",
+                        ],
+                    ),
+                    name: "expected_rs2_data_instr2",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "expected_rs2_data_instr2 [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+            )),
+            (12): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "regfile_tb",
+                        ],
+                    ),
+                    name: "rd_data_instr1",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "rd_data_instr1 [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+            )),
+            (19): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "regfile_tb",
+                        ],
+                    ),
+                    name: "rs2_addr_instr1",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "rs2_addr_instr1 [4:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+            )),
+            (21): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "regfile_tb",
+                        ],
+                    ),
+                    name: "rs2_data_instr1",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "rs2_data_instr1 [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+            )),
+            (6): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "regfile_tb",
+                        ],
+                    ),
+                    name: "fail_count",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "fail_count [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+            )),
+            (7): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "regfile_tb",
+                        ],
+                    ),
+                    name: "i_clk",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "i_clk",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+            )),
+            (16): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "regfile_tb",
+                        ],
+                    ),
+                    name: "rs1_addr_instr2",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "rs1_addr_instr2 [4:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+            )),
+            (17): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "regfile_tb",
+                        ],
+                    ),
+                    name: "rs1_data_instr1",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "rs1_data_instr1 [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+            )),
+            (20): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "regfile_tb",
+                        ],
+                    ),
+                    name: "rs2_addr_instr2",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "rs2_addr_instr2 [4:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+            )),
+            (22): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "regfile_tb",
+                        ],
+                    ),
+                    name: "rs2_data_instr2",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "rs2_data_instr2 [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+            )),
+            (23): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "regfile_tb",
+                        ],
+                    ),
+                    name: "wren_instr1",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "wren_instr1",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+            )),
+            (4): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "regfile_tb",
+                        ],
+                    ),
+                    name: "expected_rs2_data_instr1",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "expected_rs2_data_instr1 [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+            )),
+            (24): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "regfile_tb",
+                        ],
+                    ),
+                    name: "wren_instr2",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "wren_instr2",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+            )),
+        },
+        display_item_ref_counter: 31,
+        viewports: [
+            (
+                curr_left: (-0.12000000143051126),
+                curr_right: (0.8799999985694886),
+                target_left: (0.0),
+                target_right: (1.0),
+                move_start_left: (0.0),
+                move_start_right: (1.0),
+                move_duration: None,
+                move_strategy: Instant,
+            ),
+        ],
+        cursor: None,
+        markers: {},
+        focused_item: Some((25)),
+        focused_transaction: (None, None),
+        selected_items: [],
+        default_variable_name_type: Unique,
+        scroll_offset: 0.0,
+        display_variable_indices: true,
+        graphics: {},
+    )),
+    drag_started: false,
+    drag_source_idx: None,
+    drag_target_idx: Some((9)),
+    previous_waves: None,
+    count: None,
+    blacklisted_translators: [],
+    show_about: false,
+    show_keys: false,
+    show_gestures: false,
+    show_quick_start: false,
+    show_license: false,
+    show_performance: false,
+    show_logs: false,
+    show_cursor_window: false,
+    wanted_timeunit: PicoSeconds,
+    time_string_format: None,
+    show_url_entry: false,
+    variable_name_filter_focused: false,
+    variable_name_filter_type: Fuzzy,
+    variable_name_filter_case_insensitive: true,
+    rename_target: None,
+    sidepanel_width: Some(300.0),
+    ui_zoom_factor: None,
+)

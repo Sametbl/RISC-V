@@ -1,0 +1,276 @@
+/*
+#Factorial n = 8   => output = 40320 (x9)
+
+	ecall
+	addi	zero,zero,0	
+    addi	zero,zero,0
+	addi	zero,zero,0
+	addi	zero,zero,0
+kernel: 
+	addi	zero,zero,0
+	addi	ra,zero,0
+	li      sp, 0x5000
+	addi	gp,zero,0
+	addi	tp,zero,0
+	addi	t0,zero,0
+	addi	t1,zero,0
+	addi	t2,zero,0
+	addi	s0,zero,0
+	addi	a0,zero,0
+	addi	a1,zero,0
+	addi	a2,zero,0
+	addi	s3,zero,0
+	addi	a4,zero,0
+	addi	a5,zero,0
+	addi	a6,zero,0
+	addi	a7,zero,0
+	addi	s2,zero,0
+	addi	s3,zero,0
+	addi	s4,zero,0
+	addi	s5,zero,0
+	addi	s6,zero,0
+	addi	s7,zero,0
+	addi	s8,zero,0
+	addi	s9,zero,0
+	addi	s10,zero,0
+	addi	s11,zero,0
+	addi	t3,zero,0
+	addi	t4,zero,0
+	addi	t5,zero,0
+	addi	t6,zero,0
+	call	main
+	addi	zero,zero,0
+	mv	    s1,a0
+	addi	zero,zero,0
+	addi	zero,zero,0
+	addi	zero,zero,0
+	addi	zero,zero,0
+	j _exit
+	addi	zero,zero,0
+	addi	zero,zero,0
+	addi	zero,zero,0
+	addi	zero,zero,0
+multiply_by_add:
+	addi	sp,sp,-48
+	sw	s0,44(sp)
+	addi	s0,sp,48
+	sw	a0,-36(s0)
+	sw	a1,-40(s0)
+	sw	zero,-24(s0)
+	sw	zero,-20(s0)
+	j	.L2
+.L3:
+	lw	a4,-24(s0)
+	lw	a5,-36(s0)
+	add	a5,a4,a5
+	sw	a5,-24(s0)
+	lw	a5,-20(s0)
+	addi	a5,a5,1
+	sw	a5,-20(s0)
+.L2:
+	lw	a4,-20(s0)
+	lw	a5,-40(s0)
+	bltu	a4,a5,.L3
+	lw	a5,-24(s0)
+	mv	a0,a5
+	lw	s0,44(sp)
+	addi	sp,sp,48
+	jr	ra
+factorial:
+	addi	sp,sp,-32
+	sw	ra,28(sp)
+	sw	s0,24(sp)
+	addi	s0,sp,32
+	sw	a0,-20(s0)
+	lw	a5,-20(s0)
+	bnez	a5,.L6
+	li	a5,0
+	j	.L7
+.L6:
+	lw	a4,-20(s0)
+	li	a5,1
+	bne	a4,a5,.L8
+	li	a5,1
+	j	.L7
+.L8:
+	lw	a5,-20(s0)
+	addi	a5,a5,-1
+	mv	a0,a5
+	call	factorial
+	mv	a5,a0
+	mv	a1,a5
+	lw	a0,-20(s0)
+	call	multiply_by_add
+	sw	a0,-20(s0)
+	lw	a5,-20(s0)
+.L7:
+	mv	a0,a5
+	lw	ra,28(sp)
+	lw	s0,24(sp)
+	addi	sp,sp,32
+	jr	ra
+main:
+	addi	sp,sp,-32
+	sw	ra,28(sp)
+	sw	s0,24(sp)
+	addi	s0,sp,32
+	li	a5,8
+	sw	a5,-20(s0)
+	lw	a5,-20(s0)
+	mv	a0,a5
+	call	factorial
+	mv	a5,a0
+	sw	a5,-24(s0)
+	lw	a5,-24(s0)
+	mv	a0,a5
+	lw	ra,28(sp)
+	lw	s0,24(sp)
+	addi	sp,sp,32
+	jr	ra
+	addi	zero,zero,0
+	addi	zero,zero,0
+	addi	zero,zero,0
+	addi	zero,zero,0
+	auipc	ra,0x0
+	jalr	ra,ra,0
+	addi	zero,zero,0
+	addi	zero,zero,0
+	addi	zero,zero,0
+	addi	zero,zero,0
+_exit:
+    ebreak
+*/
+00000073
+00000013
+00000013
+00000013
+00000013
+00000013
+00000093
+00005137
+00010113
+00000193
+00000213
+00000293
+00000313
+00000393
+00000413
+00000513
+00000593
+00000613
+00000993
+00000713
+00000793
+00000813
+00000893
+00000913
+00000993
+00000A13
+00000A93
+00000B13
+00000B93
+00000C13
+00000C93
+00000D13
+00000D93
+00000E13
+00000E93
+00000F13
+00000F93
+00000317
+10C300E7
+00000013
+00050493
+00000013
+00000013
+00000013
+00000013
+15C0006F
+00000013
+00000013
+00000013
+00000013
+FD010113
+02812623
+03010413
+FCA42E23
+FCB42C23
+FE042423
+FE042623
+0200006F
+FE842703
+FDC42783
+00F707B3
+FEF42423
+FEC42783
+00178793
+FEF42623
+FEC42703
+FD842783
+FCF76EE3
+FE842783
+00078513
+02C12403
+03010113
+00008067
+FE010113
+00112E23
+00812C23
+02010413
+FEA42623
+FEC42783
+00079663
+00000793
+0480006F
+FEC42703
+00100793
+00F71663
+00100793
+0340006F
+FEC42783
+FFF78793
+00078513
+00000317
+FBC300E7
+00050793
+00078593
+FEC42503
+00000317
+F4C300E7
+FEA42623
+FEC42783
+00078513
+01C12083
+01812403
+02010113
+00008067
+FE010113
+00112E23
+00812C23
+02010413
+00800793
+FEF42623
+FEC42783
+00078513
+00000317
+F64300E7
+00050793
+FEF42423
+FE842783
+00078513
+01C12083
+01812403
+02010113
+00008067
+00000013
+00000013
+00000013
+00000013
+00000097
+000080E7
+00000013
+00000013
+00000013
+00000013
+00100073
+

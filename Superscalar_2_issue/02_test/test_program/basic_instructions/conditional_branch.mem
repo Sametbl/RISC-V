@@ -1,0 +1,107 @@
+/*
+
+addi x1 , x0, 0
+addi x2 , x0, 0
+addi x3 , x0, 0
+addi x4 , x0, 0
+addi x5 , x0, 0
+addi x6 , x0, 0
+
+addi x10, x0, 123 # CONS
+addi x11, x0, 123 # BEG
+addi x12, x0, 321 # BNE
+addi x13, x0, 124 # BLT
+addi x14, x0, 122 # BGE
+addi x15, x0, 124 # BLTU
+addi x16, x0, 122 # BGEU
+
+beq  x10, x12, .F1
+addi x1 , x1 , 0x700
+bne  x10, x11, .F2
+addi x2 , x2 , 0x700
+blt  x10, x14, .F3
+addi x3 , x3 , 0x700    
+bge  x10, x13, .F4
+addi x4 , x4 , 0x700
+bltu x10, x16, .F5
+addi x5 , x5 , 0x700
+bgeu x10, x15, .F6
+addi x6 , x6 , 0x700
+
+     beq  x10, x11, .P1
+     addi x1 , x1 , 0x07     
+.P1: addi x1 , x1 , 0x70
+     bne  x10, x12, .P2
+     addi x2 , x2 , 0x07     
+.P2: addi x2 , x2 , 0x70
+     blt  x10, x13, .P3
+     addi x3 , x3 , 0x07    
+.P3: addi x3 , x3 , 0x70
+     bge  x10, x14, .P4
+     addi x4 , x4 , 0x07    
+.P4: addi x4 , x4 , 0x70
+     bltu x10, x15, .P5
+     addi x5 , x5 , 0x07    
+.P5: addi x5 , x5 , 0x70
+     bgeu x10, x16, .P6   
+     
+.F1: addi x1 , x1 , 0x07
+.F2: addi x2 , x2 , 0x07
+.F3: addi x3 , x3 , 0x07
+.F4: addi x4 , x4 , 0x07
+.F5: addi x5 , x5 , 0x07
+.F6: addi x6 , x6 , 0x07
+.P6: addi x6 , x6 , 0x70
+     lui x17, 0xdead
+*/
+
+
+93 00 00 00 
+13 01 00 00 
+93 01 00 00 
+13 02 00 00 
+93 02 00 00 
+13 03 00 00 
+13 05 B0 07 
+93 05 B0 07 
+13 06 10 14 
+93 06 C0 07 
+13 07 A0 07 
+93 07 C0 07 
+13 08 A0 07 
+63 08 C5 06 
+93 80 00 70 
+63 16 B5 06 
+13 01 01 70 
+63 44 E5 06 
+93 81 01 70 
+63 52 D5 06 
+13 02 02 70 
+63 60 05 07 
+93 82 02 70 
+63 7E F5 04 
+13 03 03 70 
+63 04 B5 00 
+93 80 70 00 
+93 80 00 07 
+63 14 C5 00 
+13 01 71 00 
+13 01 01 07 
+63 44 D5 00 
+93 81 71 00 
+93 81 01 07 
+63 54 E5 00 
+13 02 72 00 
+13 02 02 07 
+63 64 F5 00 
+93 82 72 00 
+93 82 02 07 
+63 7E 05 01 
+93 80 70 00 
+13 01 71 00 
+93 81 71 00 
+13 02 72 00 
+93 82 72 00 
+13 03 73 00 
+13 03 03 07 
+b7 d8 ea 0d 

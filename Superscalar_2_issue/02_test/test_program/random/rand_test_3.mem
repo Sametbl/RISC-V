@@ -1,0 +1,175 @@
+/*
+#GCD
+#2 số a, b lấy min, lấy max chia cho min, 2 kết quả đều dư 0 thì số đó là UCLN
+#hạ dần số bị chia (bắt đầu bằng min) tới khi nào 2 kết quả đều dư 0 thì số đó là UCLN
+ecall
+#reset registers
+addi x1, x0, 0
+addi x2, x0, 0
+addi x3, x0, 0
+addi x4, x0, 0
+addi x5, x0, 0
+addi x6, x0, 0
+addi x7, x0, 0
+addi x8, x0, 0
+addi x9, x0, 0
+addi x10, x0, 0
+addi x11, x0, 0
+addi x12, x0, 0
+addi x13, x0, 0
+addi x14, x0, 0
+addi x15, x0, 0
+addi x16, x0, 0
+addi x17, x0, 0
+addi x18, x0, 0
+addi x19, x0, 0
+addi x20, x0, 0
+addi x21, x0, 0
+addi x22, x0, 0
+addi x23, x0, 0
+addi x24, x0, 0
+addi x25, x0, 0
+addi x26, x0, 0
+addi x27, x0, 0
+addi x28, x0, 0
+addi x29, x0, 0
+addi x30, x0, 0
+addi x31, x0, 0
+
+case1: addi x14, x0, 10 #a=10, b=12
+       addi x15, x0, 12
+       jal x3, findGCD
+       addi x19, x9, 0 #result1=2
+case2: addi x14, x0, 3  #a=3, b=5
+       addi x15, x0, 5
+       jal x3, findGCD
+       addi x20, x9, 0 #result2=1
+case3: addi x14, x0, 4 #a=4, b=4
+       addi x15, x0, 4
+       jal x3, findGCD
+       addi x21, x9, 0 #result3=4
+       jal end
+
+#Find GCD
+#input a= x14, b = x15
+findGCD: slt x27, x14, x15
+         beq x27, x0, next #a > b
+
+         addi x17, x14, 0
+         jal loop_find
+
+next:    addi x17, x15, 0
+         jal loop_find 
+#input x17 là số nhỏ hơn => result = x9
+loop_find:   addi x10, x15, 0 #num1
+             addi x11, x17, 0
+             jal divide
+             #take re
+             addi x4, x10, 0
+             #
+             addi x10, x14, 0 #num2
+             addi x11, x17, 0
+             jal divide
+             #take re
+             addi x5, x10, 0  
+             #check
+             addi x17, x17, -1
+             bne x4, x0, loop_find
+             bne x5, x0, loop_find
+result:      addi x9, x17, 1    
+jalr x3
+        
+
+##Divide function a\b
+##Devidend: a
+##Devisor: b
+##input a = x10; b= x11
+##addi x10,x0,60
+##addi x11,x0,10
+##output x13 = result; x10 = remainder
+divide:     addi x28, x11, -1
+            sub x10, x10, x11 
+            slt x29, x10, x0 #x10 < 10 -> x29 = 1
+            addi x30, x30, 1  # 
+            beq x29, x0, divide
+            add x10, x10, x11 #return remainder x10
+            addi x30, x30, -1
+            add x13,x0,x30 #return x13
+ret
+end: ebreak
+*/
+00000073
+00000093
+00000113
+00000193
+00000213
+00000293
+00000313
+00000393
+00000413
+00000493
+00000513
+00000593
+00000613
+00000693
+00000713
+00000793
+00000813
+00000893
+00000913
+00000993
+00000A13
+00000A93
+00000B13
+00000B93
+00000C13
+00000C93
+00000D13
+00000D93
+00000E13
+00000E93
+00000F13
+00000F93
+00A00713
+00C00793
+02C001EF
+00048993
+00300713
+00500793
+01C001EF
+00048A13
+00400713
+00400793
+00C001EF
+00048A93
+074000EF
+00F72DB3
+000D8663
+00070893
+00C000EF
+00078893
+004000EF
+00078513
+00088593
+02C000EF
+00050213
+00070513
+00088593
+01C000EF
+00050293
+FFF88893
+FC021EE3
+FC029CE3
+00188493
+000180E7
+FFF58E13
+40B50533
+00052EB3
+001F0F13
+FE0E88E3
+00B50533
+FFFF0F13
+01E006B3
+00008067
+00100073
+

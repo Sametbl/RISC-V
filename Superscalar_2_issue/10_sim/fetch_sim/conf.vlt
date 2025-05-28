@@ -1,0 +1,7 @@
+`verilator_config
+lint_off -file "../../00_src/pc_gen.sv" 
+lint_off -file "../../00_src/instruction_cache.sv" 
+lint_off -file "../../00_src/register.sv" 
+lint_off -file "../../00_src/validation.sv" 
+lint_off -file "../../00_src/aqua_fetch.sv" 
+lint_off -file "../../01_bench/fetch_tb.sv"

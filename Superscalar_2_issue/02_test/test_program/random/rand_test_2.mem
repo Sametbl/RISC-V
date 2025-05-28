@@ -1,0 +1,125 @@
+/*
+# #Factorial of N=9
+ecall
+#reset registers
+addi x1, x0, 0
+addi x2, x0, 0
+addi x3, x0, 0
+addi x4, x0, 0
+addi x5, x0, 0
+addi x6, x0, 0
+addi x7, x0, 0
+addi x8, x0, 0
+addi x9, x0, 0
+addi x10, x0, 0
+addi x11, x0, 0
+addi x12, x0, 0
+addi x13, x0, 0
+addi x14, x0, 0
+addi x15, x0, 0
+addi x16, x0, 0
+addi x17, x0, 0
+addi x18, x0, 0
+addi x19, x0, 0
+addi x20, x0, 0
+addi x21, x0, 0
+addi x22, x0, 0
+addi x23, x0, 0
+addi x24, x0, 0
+addi x25, x0, 0
+addi x26, x0, 0
+addi x27, x0, 0
+addi x28, x0, 0
+addi x29, x0, 0
+addi x30, x0, 0
+addi x31, x0, 0
+
+Init: addi x3, x0, 1
+      addi x5, x0, 0
+InputN:addi x4, x0, 9
+#Calculate Factorial
+calculate: addi x27, x0, 1 
+           beq x4, x0, take_reuslt
+           beq x4, x3, take_reuslt
+           addi x28, x0, 2         
+loop     : addi x12, x27, 0
+           addi x13, x28, 0
+           jal mul
+           #result = x12
+           addi x27, x12, 0   
+           addi x28, x28, 1
+           blt x28, x4, loop
+           beq x28, x4, loop
+           jal take_reuslt
+#Mul
+##x12*x13
+##output x12
+mul: addi x27, x0, 1
+     #addi x13, x13, 0
+     addi x30, x0, 0
+mul_c: add x30, x30, x12
+     sub x13, x13, x27
+     bne x13, x0, mul_c
+     addi x12, x30, 0
+ret
+take_reuslt:   addi x9, x27, 0
+
+end: ebreak
+*/
+
+00000073
+00000093
+00000113
+00000193
+00000213
+00000293
+00000313
+00000393
+00000413
+00000493
+00000513
+00000593
+00000613
+00000693
+00000713
+00000793
+00000813
+00000893
+00000913
+00000993
+00000A13
+00000A93
+00000B13
+00000B93
+00000C13
+00000C93
+00000D13
+00000D93
+00000E13
+00000E93
+00000F13
+00000F93
+00100193
+00000293
+00900213
+00100D93
+04020463
+04320263
+00200E13
+000D8613
+000E0693
+018000EF
+00060D93
+001E0E13
+FE4E46E3
+FE4E04E3
+020000EF
+00100D93
+00000F13
+00CF0F33
+41B686B3
+FE069CE3
+000F0613
+00008067
+000D8493
+00100073

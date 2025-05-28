@@ -1,0 +1,98 @@
+/*
+#Unconditional Jump Instr NO HAZARD
+
+#Init value
+addi x1, x0, 0x164
+addi x2, x0, 0x18
+addi x3, x0, 0x98
+addi x4, x0, 0x10
+addi x5, x0, 0x78
+addi x6, x0, 0x781
+addi x7, x0, 0x139
+addi x8, x0, 0x753
+addi x9, x0, 0x081
+addi x10, x0, 0x712
+addi x11, x0, 0x62
+addi x12, x0, 0x91
+addi x13, x0, 0x51
+addi x14, x0, 0x87
+addi x15, x0, 0x541
+addi x16, x0, 0x76
+addi x17, x0, 0x81
+addi x18, x0, 0x98
+addi x19, x0, 0x65
+addi x20, x0, 0x1
+#JAL, JALR
+a: jal x0, c
+f: add x21, x1, x2
+sub x22, x3, x5
+b:addi x23, x4, 0x218
+addi x29, x8, 0x71
+jalr x27, x22, d
+c:addi x24, x1, 0x2
+add x25, x8, x11
+jal x0, b
+d: add x26, x6, x2
+jalr x30, x22, e
+sub x31, x5, x12
+e: sub x28, x5, x9
+jal x0, f
+#AUIPC, LUI
+auipc x1, 463
+lui x2, 335115
+auipc x3, 325
+auipc x4, 31
+lui x5, 0x432
+auipc x6, 0
+auipc x7, 1248
+lui x8, 0x8121
+auipc x9, 2180
+lui  x10, 13480
+
+*/
+
+
+93 00 40 16 
+13 01 80 01 
+93 01 80 09 
+13 02 00 01 
+93 02 80 07 
+13 03 10 78 
+93 03 90 13 
+13 04 30 75 
+93 04 10 08 
+13 05 20 71 
+93 05 20 06 
+13 06 10 09 
+93 06 10 05 
+13 07 70 08 
+93 07 10 54 
+13 08 60 07 
+93 08 10 08 
+13 09 80 09 
+93 09 50 06 
+13 0A 10 00 
+6F 00 80 01 
+B3 8A 20 00 
+33 8B 51 40 
+93 0B 82 21 
+93 0E 14 07 
+E7 0D 4B 07 
+13 8C 20 00 
+B3 0C B4 00 
+6F F0 DF FE 
+33 0D 23 00 
+67 0F 0B 08 
+B3 8F C2 40 
+33 8E 92 40 
+6F F0 1F FD 
+97 F0 1C 00 
+37 B1 D0 51 
+97 51 14 00 
+17 F2 01 00 
+B7 22 43 00 
+17 03 00 00 
+97 03 4E 00 
+37 14 12 08 
+97 44 88 00 
+37 85 4A 03 

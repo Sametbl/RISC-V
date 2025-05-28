@@ -1,0 +1,6 @@
+
+State Machine - |aqua_processor|schedule_unit:instruction_agent|schedule_control:control_unit_remake|current_state
+Name current_state.INIT current_state.W_TMP current_state.WT_TMP 
+current_state.INIT 0 0 0 
+current_state.WT_TMP 1 0 1 
+current_state.W_TMP 1 1 0 

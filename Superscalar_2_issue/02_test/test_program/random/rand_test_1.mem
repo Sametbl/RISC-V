@@ -1,0 +1,98 @@
+/*
+#Fibonacci of N=9
+#Final result = x9 
+ecall
+#reset registers
+addi x1, x0, 0
+addi x2, x0, 0
+addi x3, x0, 0
+addi x4, x0, 0
+addi x5, x0, 0
+addi x6, x0, 0
+addi x7, x0, 0
+addi x8, x0, 0
+addi x9, x0, 0
+addi x10, x0, 0
+addi x11, x0, 0
+addi x12, x0, 0
+addi x13, x0, 0
+addi x14, x0, 0
+addi x15, x0, 0
+addi x16, x0, 0
+addi x17, x0, 0
+addi x18, x0, 0
+addi x19, x0, 0
+addi x20, x0, 0
+addi x21, x0, 0
+addi x22, x0, 0
+addi x23, x0, 0
+addi x24, x0, 0
+addi x25, x0, 0
+addi x26, x0, 0
+addi x27, x0, 0
+addi x28, x0, 0
+addi x29, x0, 0
+addi x30, x0, 0
+addi x31, x0, 0
+
+InputN: addi x5, x0, 9
+Init: addi x2, x0, 0
+      addi x3, x0, 1 #previous fibonacci value
+      addi x4, x4, 0
+      addi x6, x6, 0
+calculate: add x4, x2, x3
+           addi x2, x3, 0 #fibonacci value
+           addi x3, x4, 0
+           addi x6, x6, 1
+           beq x5, x6, take_result
+           jal calculate
+ take_result: add x9, x0, x2
+ ebreak
+*/
+00000073
+00000093
+00000113
+00000193
+00000213
+00000293
+00000313
+00000393
+00000413
+00000493
+00000513
+00000593
+00000613
+00000693
+00000713
+00000793
+00000813
+00000893
+00000913
+00000993
+00000A13
+00000A93
+00000B13
+00000B93
+00000C13
+00000C93
+00000D13
+00000D93
+00000E13
+00000E93
+00000F13
+00000F93
+00900293
+00000113
+00100193
+00020213
+00030313
+00310233
+00018113
+00020193
+00130313
+00628463
+FEDFF0EF
+002004B3
+00100073
+
+

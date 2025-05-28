@@ -1,0 +1,112 @@
+/*
+#Unconditional Jump Instr WITH HAZARD
+ecall
+#Init value
+addi x1, x0, 0x164
+addi x2, x0, 0x18
+addi x3, x0, 0x98
+addi x4, x0, 0x10
+addi x5, x0, 0x78
+addi x6, x0, 0x781
+addi x7, x0, 0x139
+addi x8, x0, 0x753
+addi x9, x0, 0x081
+addi x10, x0, 0x712
+addi x11, x0, 0
+
+#JAL, JALR
+a: jal x0, c
+add x13, x10, x9
+add x13, x13, x7
+jal x1, e
+f: add x4, x4, x7
+sub x5, x3, x5
+ori x1, x0, 0x15
+jalr x8, x1, g
+b:addi x6, x5, 0x218
+addi x9, x0, 0x10
+jalr x7, x9, d
+c:addi x10, x9, 0x2
+add x2, x8, x1
+jal x5, b
+jal x2, a
+jal x21, d
+d: add x6, x6, x2
+jalr x3, x6, e
+add x12, x5, x7
+sub x1, x8, x10
+e: sub x8, x5, x9
+add x8, x1, x7
+jal x0, f
+add x10, x1, x5
+jal x2, f
+jalr x20, x8, g
+g: add x1, x9, x4
+#AUIPC, LUI
+auipc x7, 463
+jal x7, d
+lui x8, 335115
+jalr x8, x1, e
+auipc x0, 325
+auipc x4, 31
+lui x5, 0x432
+auipc x1, 0
+auipc x4, 1248
+lui x8, 0x8121
+auipc x5, 2180
+lui  x1, 13480
+ebreak
+*/
+
+00000073
+16400093
+01800113
+09800193
+01000213
+07800293
+78100313
+13900393
+75300413
+08100493
+71200513
+00000593
+02C0006F
+009506B3
+007686B3
+044000EF
+00720233
+405182B3
+01506093
+09808467
+21828313
+01000493
+070483E7
+00248513
+00140133
+FEDFF2EF
+FC9FF16F
+00400AEF
+00230333
+080301E7
+00728633
+40A400B3
+40928433
+00708433
+FB9FF06F
+00508533
+FB1FF16F
+09840A67
+004480B3
+001CF397
+FD1FF3EF
+51D0B437
+08008467
+00145017
+0001F217
+004322B7
+00000097
+004E0217
+08121437
+00884297
+034A80B7
+00100073

@@ -1,0 +1,246 @@
+/*
+#Reg-Reg & Reg-Imm Instr NO HAZARD
+ecall
+#init value
+#ADD, SUB, ADDI
+addi x1, x0, 0x164
+addi x2, x0, 0x18
+addi x3, x0, 0x98
+addi x4, x0, 0x10
+addi x5, x0, 0x78
+addi x6, x0, 0x781
+addi x7, x0, 0x139
+addi x8, x0, 0x753
+addi x9, x0, 0x081
+addi x10, x0, 0x712
+addi x11, x0, 0x62
+addi x12, x0, 0x91
+addi x13, x0, 0x51
+addi x14, x0, 0x87
+addi x15, x0, 0x541
+addi x16, x0, 0x76
+addi x17, x0, 0x81
+addi x18, x0, 0x98
+addi x19, x0, 0x65
+addi x20, x0, 0x1
+add x21, x1, x2
+sub x22, x3, x1
+addi x23, x4, 0x218
+sub x24, x6, x4
+add x25, x8, x11
+add x26, x6, x2
+sub x27, x5, x9
+addi x28, x7, 0x126
+addi x29, x8, 0x71
+sub x30, x10, x7
+sub x31, x5, x12
+#AND, OR, XOR
+and x0, x1, x2
+and x1, x11, x12
+or x2, x14, x16
+xor x3, x11, x14
+and x4, x16, x10
+and x5, x8, x9
+and x6, x20, x17
+or x7, x18, x13
+or x8, x19, x20
+xor x9, x24, x21
+xor x10, x23, x21
+or x11, x19, x17
+and x12, x17, x13
+or x13, x25, x27
+or x14, x18, x17
+and x15, x16, x1
+and x16, x27, x30
+and x17, x24, x2
+or x18, x1, x4
+and x19, x31, x23
+or x20, x29, x30
+or x21, x27, x3
+xor x22, x23, x2
+xor x23, x29, x3
+and x24, x1, x2
+or x25, x3, x4
+xor x26, x1, x28
+xor x27, x9, x23
+and x28, x7, x28
+or x29, x5, x6
+and x30, x8, x2
+xor x31, x9, x10
+#ANDI, ORI, XORI
+andi x0, x11, 352
+xori x2, x11, 646
+ori x3, x15, 2
+andi x4, x14, 25
+andi x5, x17, -1
+andi x6, x11, 9
+ori x7, x9, 32
+xori x8, x19, 43
+andi x9, x22, 12
+ori x10, x24, 3
+ori x11, x25, 45
+xori x12, x18, 1
+xori x13, x21, 128
+andi x14, x27, 0
+ori x15, x13, 54
+xori x16, x20, 921
+andi x17, x28, 6
+andi x18, x21, 28
+ori x19, x30, 432
+ori x20, x26, 32
+#SLL, SRL, SRA
+sll x21, x1, x3
+srl x22, x1, x6
+sll x23, x2, x4
+sll x24, x6, x3
+sra x25, x7, x6
+sra x26, x8, x1
+srl x27, x11, x10
+sll x28, x7, x4
+srl x29, x13, x12
+sra x30, x17, x10
+sra x31, x15, x7
+#SLLI, SRLI, SRAI
+slli x0, x1, 9
+slli x1, x6, 13
+srli x2, x7, 1
+srai x3, x9, 0
+srai x4, x11, 20
+slli x5, x17, 29
+srli x6, x16, 19
+srai x7, x15, 2
+slli x8, x19, 8
+srai x9, x23, 17
+srli x10, x21, 26
+#SLT, SLTU
+slt x11, x23, x11
+sltu x12, x21, x22
+sltu x13, x24, x14
+slt x14, x21, x22
+slt x15, x26, x20
+sltu x16, x27, x28
+slt x17, x27, x23
+sltu x18, x21, x24
+slt x19, x30, x31
+sltu x20, x30, x31
+ebreak
+*/
+
+
+00000073
+16400093
+01800113
+09800193
+01000213
+07800293
+78100313
+13900393
+75300413
+08100493
+71200513
+06200593
+09100613
+05100693
+08700713
+54100793
+07600813
+08100893
+09800913
+06500993
+00100A13
+00208AB3
+40118B33
+21820B93
+40430C33
+00B40CB3
+00230D33
+40928DB3
+12638E13
+07140E93
+40750F33
+40C28FB3
+0020F033
+00C5F0B3
+01076133
+00E5C1B3
+00A87233
+009472B3
+011A7333
+00D963B3
+0149E433
+015C44B3
+015BC533
+0119E5B3
+00D8F633
+01BCE6B3
+01196733
+001877B3
+01EDF833
+002C78B3
+0040E933
+017FF9B3
+01EEEA33
+003DEAB3
+002BCB33
+003ECBB3
+0020FC33
+0041ECB3
+01C0CD33
+0174CDB3
+01C3FE33
+0062EEB3
+00247F33
+00A4CFB3
+1605F013
+2865C113
+0027E193
+01977213
+FFF8F293
+0095F313
+0204E393
+02B9C413
+00CB7493
+003C6513
+02DCE593
+00194613
+080AC693
+000DF713
+0366E793
+399A4813
+006E7893
+01CAF913
+1B0F6993
+020D6A13
+00309AB3
+0060DB33
+00411BB3
+00331C33
+4063DCB3
+40145D33
+00A5DDB3
+00439E33
+00C6DEB3
+40A8DF33
+4077DFB3
+00909013
+00D31093
+0013D113
+4004D193
+4145D213
+01D89293
+01385313
+4027D393
+00899413
+411BD493
+01AAD513
+00BBA5B3
+016AB633
+00EC36B3
+016AA733
+014D27B3
+01CDB833
+017DA8B3
+018AB933
+01FF29B3
+01FF3A33
+00100073

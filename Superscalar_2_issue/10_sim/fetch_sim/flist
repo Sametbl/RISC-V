@@ -1,0 +1,9 @@
+-I./../00_src/
+../../00_src/pc_gen.sv
+../../00_src/instruction_cache.sv
+../../00_src/register.sv
+../../00_src/validation.sv
+../../00_src/aqua_fetch.sv
+../../01_bench/fetch_tb.sv
+./conf.vlt
+-top testbench      

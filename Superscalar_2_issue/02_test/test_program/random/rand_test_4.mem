@@ -1,0 +1,200 @@
+/*
+#sort number string: 15, 12, 47, 9, 2, 11, 34, 67, 8, 2
+ecall
+#reset registers
+addi x1, x0, 0
+addi x2, x0, 0
+addi x3, x0, 0
+addi x4, x0, 0
+addi x5, x0, 0
+addi x6, x0, 0
+addi x7, x0, 0
+addi x8, x0, 0
+addi x9, x0, 0
+addi x10, x0, 0
+addi x11, x0, 0
+addi x12, x0, 0
+addi x13, x0, 0
+addi x14, x0, 0
+addi x15, x0, 0
+addi x16, x0, 0
+addi x17, x0, 0
+addi x18, x0, 0
+addi x19, x0, 0
+addi x20, x0, 0
+addi x21, x0, 0
+addi x22, x0, 0
+addi x23, x0, 0
+addi x24, x0, 0
+addi x25, x0, 0
+addi x26, x0, 0
+addi x27, x0, 0
+addi x28, x0, 0
+addi x29, x0, 0
+addi x30, x0, 0
+addi x31, x0, 0
+
+get_base_addr:  lui x1, 0x4 #base addr = 0x4000
+strore_numbers: addi x20, x0, 15 #1
+                sw   x20, 0(x1)
+                addi x20, x0, 12#2
+                sw   x20, 4(x1)
+                addi x20, x0, 47#3
+                sw   x20, 8(x1)
+                addi x20, x0, 9 #4
+                sw   x20, 12(x1)
+                addi x20, x0, 2 #5
+                sw   x20, 16(x1)
+                addi x20, x0, 11#6
+                sw   x20, 20(x1)
+                addi x20, x0, 34#7
+                sw   x20, 24(x1)
+                addi x20, x0, 67#8
+                sw   x20, 28(x1)
+                addi x20, x0, 8 #9
+                sw   x20, 32(x1)
+                addi x20, x0, 2 #10
+                sw   x20, 36(x1)
+#index
+addi x12, x0, 0
+addi x14, x1, 0
+addi x15, x0, 0
+#constant
+addi x4, x1, 40#address align 4, 10 numbers => last number at address = 0x...24
+
+main: addi x12, x0, 0
+      beq x14, x4, take_result
+next: lw x27, 0(x14)
+     addi x12, x12, 4
+     add x15, x14, x12
+     #check
+     addi x14, x14, 4 
+     bge x15, x4, main
+     addi x14, x14, -4
+     lw x28, 0(x15)
+     #
+     addi x10, x27, 0
+     addi x11, x28, 0
+     jal compare_swap
+restore: sw x10, 0(x14)
+        #addi x9, x10, 0
+        sw x11, 0(x15)
+        #addi x9, x11, 0
+        jal next
+     
+#input x10, x11      output x10, x11 sau khi swap
+compare_swap: slt x27, x10, x11
+             beq x27, x0, swap
+             jal restore
+swap:        addi x29, x10, 0
+             addi x10, x11, 0
+             addi x11, x29, 0
+             jal restore
+
+take_result:   
+lui x1, 0x4 #base addr = 0x4000
+lw   x16, 0(x1)
+lw   x17, 4(x1)
+lw   x18, 8(x1)
+lw   x19, 12(x1)
+lw   x20, 16(x1)
+lw   x21, 20(x1)
+lw   x22, 24(x1)
+lw   x23, 28(x1)
+lw   x24, 32(x1)
+lw   x25, 36(x1) 
+end: ebreak
+*/
+
+00000073
+00000093
+00000113
+00000193
+00000213
+00000293
+00000313
+00000393
+00000413
+00000493
+00000513
+00000593
+00000613
+00000693
+00000713
+00000793
+00000813
+00000893
+00000913
+00000993
+00000A13
+00000A93
+00000B13
+00000B93
+00000C13
+00000C93
+00000D13
+00000D93
+00000E13
+00000E93
+00000F13
+00000F93
+000040B7
+00F00A13
+0140A023
+00C00A13
+0140A223
+02F00A13
+0140A423
+00900A13
+0140A623
+00200A13
+0140A823
+00B00A13
+0140AA23
+02200A13
+0140AC23
+04300A13
+0140AE23
+00800A13
+0340A023
+00200A13
+0340A223
+00000613
+00008713
+00000793
+02808213
+00000613
+04470A63
+00072D83
+00460613
+00C707B3
+00470713
+FE47D4E3
+FFC70713
+0007AE03
+000D8513
+000E0593
+010000EF
+00A72023
+00B7A023
+FD1FF0EF
+00B52DB3
+000D8463
+FEDFF0EF
+00050E93
+00058513
+000E8593
+FDDFF0EF
+000040B7
+0000A803
+0040A883
+0080A903
+00C0A983
+0100AA03
+0140AA83
+0180AB03
+01C0AB83
+0200AC03
+0240AC83
+00100073
+

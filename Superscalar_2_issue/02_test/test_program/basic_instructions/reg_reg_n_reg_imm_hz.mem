@@ -1,0 +1,180 @@
+/*
+#Reg-Reg & Reg-Imm Instr WITH HAZARD
+ecall
+#ADD, SUB, ADDI
+addi x1, x0, 0x164
+addi x2, x0, 0x18
+addi x3, x0, 0x98
+addi x4, x0, 0x10
+addi x5, x0, 0x78
+add x2, x1, x3
+add x3, x3, x4
+sub x1, x4, x5
+add x2, x3, x1
+sub x1, x2, x4
+add x1, x1, x1
+addi x1, x4, 0x13
+add x4, x1, x2
+sub x2, x4, x3
+add x5, x2, x4
+addi x5, x2, 0x287
+sub x3, x1, x5
+add x2, x1, x0
+sub x0, x3, x5
+add x3, x2, x5
+add x3, x4, x5
+#AND, OR, XOR
+and x6, x1, x4
+or x6, x0, x3
+xor x7, x6, x5
+and x8, x8, x1
+xor x7, x2, x3
+and x9, x7, x6
+or x9, x9, x5
+xor x10, x9, x8
+and x11, x10, x9
+or x7, x7, x6
+and x8, x1, x3
+or x8, x8, x8
+xor x8, x10, x11
+#ANDI, ORI, XORI
+andi x8, x0, 0x753
+ori x10, x10, 0x782
+xori x11, x8, 0x23
+andi x9, x0, 0x081
+andi x12, x10, 35
+xori x13, x6, 345
+ori x14, x9, 0x74
+andi x15, x14, 2
+andi x15, x15, 25
+xori x16, x12, 0x3
+andi x10, x0, 0x712
+andi x1, x2, 230
+ori x4, x1, 984
+xor x5, x10, x8
+#SLL, SRL, SRA
+sll x17, x1, x5
+srl x18, x14, x15
+sra x11, x17, x15
+sll x19, x17, x18
+sll x10, x10, x17
+srl x20, x4, x7
+sra x20, x9, x12
+srl x21, x20, x11
+sll x22, x16, x14
+sra x23, x1, x5
+srl x24, x23, x20
+sll x24, x24, x21
+sra x25, x9, x12
+#SLLI, SRLI, SRAI
+slli x26, x1, 3
+srli x27, x26, 20
+slli x20, x22, 4
+slli x25, x22, 21
+srai x26, x26, 13
+srai x21, x19, 4
+srli x29, x19, 1
+slli x27, x21, 3
+srai x26, x28, 4
+slli x30, x23, 18
+srai x28, x30, 28
+srli x31, x25, 0
+srai x28, x20, 7
+slli x26, x28, 13
+srai x31, x31, 9
+#SLT, SLTU
+slt x0, x1, x28
+sltu x1, x28, x31
+slt x26, x30, x27
+slt x2, x3, x4
+sltu x3, x3, x25
+sltu x4, x8, x29
+slt x5, x28, x27
+ebreak
+*/
+
+00000073
+16400093
+01800113
+09800193
+01000213
+07800293
+00308133
+004181B3
+405200B3
+00118133
+404100B3
+001080B3
+01320093
+00208233
+40320133
+004102B3
+28710293
+405081B3
+00008133
+40518033
+005101B3
+005201B3
+0040F333
+00306333
+005343B3
+00147433
+003143B3
+0063F4B3
+0054E4B3
+0084C533
+009575B3
+0063E3B3
+0030F433
+00846433
+00B54433
+75307413
+78256513
+02344593
+08107493
+02357613
+15934693
+0744E713
+00277793
+0197F793
+00364813
+71207513
+0E617093
+3D80E213
+008542B3
+005098B3
+00F75933
+40F8D5B3
+012899B3
+01151533
+00725A33
+40C4DA33
+00BA5AB3
+00E81B33
+4050DBB3
+014BDC33
+015C1C33
+40C4DCB3
+00309D13
+014D5D93
+004B1A13
+015B1C93
+40DD5D13
+4049DA93
+0019DE93
+003A9D93
+404E5D13
+012B9F13
+41CF5E13
+000CDF93
+407A5E13
+00DE1D13
+409FDF93
+01C0A033
+01FE30B3
+01BF2D33
+0041A133
+0191B1B3
+01D43233
+01BE22B3
+00100073
