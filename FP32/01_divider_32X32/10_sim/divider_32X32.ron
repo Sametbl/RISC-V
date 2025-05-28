@@ -1,0 +1,468 @@
+(
+    show_hierarchy: None,
+    show_menu: None,
+    show_ticks: None,
+    show_toolbar: None,
+    show_tooltip: None,
+    show_overview: None,
+    show_statusbar: None,
+    align_names_right: None,
+    show_variable_indices: None,
+    show_variable_direction: None,
+    show_empty_scopes: None,
+    show_parameters_in_scopes: None,
+    waves: Some((
+        source: File("wave.vcd"),
+        format: Fst,
+        active_scope: Some(WaveScope((
+            strs: [
+                "divider_32X32_tb",
+                "test",
+            ],
+        ))),
+        displayed_items_order: [
+            (3),
+            (8),
+            (10),
+            (9),
+            (6),
+            (4),
+            (19),
+            (21),
+            (11),
+            (1),
+            (2),
+            (17),
+            (14),
+            (16),
+            (22),
+            (23),
+            (12),
+            (5),
+            (7),
+            (24),
+            (25),
+            (26),
+            (28),
+            (27),
+            (29),
+            (30),
+            (18),
+            (13),
+        ],
+        displayed_items: {
+            (21): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "divider_32X32_tb",
+                            "test",
+                        ],
+                    ),
+                    name: "PreStep",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "PreStep [2:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+            )),
+            (8): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "divider_32X32_tb",
+                        ],
+                    ),
+                    name: "rstn",
+                ),
+                color: Some("Yellow"),
+                background_color: None,
+                display_name: "rstn",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+            )),
+            (16): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "divider_32X32_tb",
+                            "test",
+                        ],
+                    ),
+                    name: "B_fetched",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "B_fetched [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: Some("Unsigned"),
+                field_formats: [],
+            )),
+            (6): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "divider_32X32_tb",
+                        ],
+                    ),
+                    name: "ready",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "ready",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+            )),
+            (24): Divider((
+                color: None,
+                background_color: None,
+                name: None,
+            )),
+            (17): Divider((
+                color: None,
+                background_color: None,
+                name: None,
+            )),
+            (5): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "divider_32X32_tb",
+                        ],
+                    ),
+                    name: "quotient",
+                ),
+                color: Some("Blue"),
+                background_color: None,
+                display_name: "quotient [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: Some("Unsigned"),
+                field_formats: [],
+            )),
+            (23): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "divider_32X32_tb",
+                            "test",
+                        ],
+                    ),
+                    name: "remainder_update",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "remainder_update [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: Some("Unsigned"),
+                field_formats: [],
+            )),
+            (12): Divider((
+                color: None,
+                background_color: None,
+                name: None,
+            )),
+            (19): Divider((
+                color: None,
+                background_color: None,
+                name: None,
+            )),
+            (4): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "divider_32X32_tb",
+                        ],
+                    ),
+                    name: "error",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "error",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+            )),
+            (28): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "divider_32X32_tb",
+                            "test",
+                        ],
+                    ),
+                    name: "next_A",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "next_A [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+            )),
+            (9): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "divider_32X32_tb",
+                        ],
+                    ),
+                    name: "start",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "start",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+            )),
+            (3): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "divider_32X32_tb",
+                        ],
+                    ),
+                    name: "clk",
+                ),
+                color: Some("Yellow"),
+                background_color: None,
+                display_name: "clk",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+            )),
+            (30): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "divider_32X32_tb",
+                            "test",
+                        ],
+                    ),
+                    name: "remainder_update",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "remainder_update [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+            )),
+            (11): Divider((
+                color: None,
+                background_color: None,
+                name: None,
+            )),
+            (14): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "divider_32X32_tb",
+                            "test",
+                        ],
+                    ),
+                    name: "A_fetched",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "A_fetched [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: Some("Unsigned"),
+                field_formats: [],
+            )),
+            (13): Divider((
+                color: None,
+                background_color: None,
+                name: None,
+            )),
+            (7): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "divider_32X32_tb",
+                        ],
+                    ),
+                    name: "remainder",
+                ),
+                color: Some("Blue"),
+                background_color: None,
+                display_name: "remainder [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: Some("Unsigned"),
+                field_formats: [],
+            )),
+            (2): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "divider_32X32_tb",
+                        ],
+                    ),
+                    name: "B",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "B [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: Some("Unsigned"),
+                field_formats: [],
+            )),
+            (10): Divider((
+                color: None,
+                background_color: None,
+                name: None,
+            )),
+            (18): Divider((
+                color: None,
+                background_color: None,
+                name: None,
+            )),
+            (1): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "divider_32X32_tb",
+                        ],
+                    ),
+                    name: "A",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "A [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: Some("Unsigned"),
+                field_formats: [],
+            )),
+            (29): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "divider_32X32_tb",
+                            "test",
+                        ],
+                    ),
+                    name: "quotient_update",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "quotient_update [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+            )),
+            (27): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "divider_32X32_tb",
+                            "test",
+                        ],
+                    ),
+                    name: "divident",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "divident [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: None,
+                field_formats: [],
+            )),
+            (25): Divider((
+                color: None,
+                background_color: None,
+                name: None,
+            )),
+            (26): Divider((
+                color: None,
+                background_color: None,
+                name: None,
+            )),
+            (22): Variable((
+                variable_ref: (
+                    path: (
+                        strs: [
+                            "divider_32X32_tb",
+                            "test",
+                        ],
+                    ),
+                    name: "quotient_update",
+                ),
+                color: None,
+                background_color: None,
+                display_name: "quotient_update [31:0]",
+                display_name_type: Unique,
+                manual_name: None,
+                format: Some("Unsigned"),
+                field_formats: [],
+            )),
+        },
+        display_item_ref_counter: 30,
+        viewports: [
+            (
+                curr_left: (-0.07704020868346093),
+                curr_right: (0.4379911769326883),
+                target_left: (0.0),
+                target_right: (1.0),
+                move_start_left: (0.0),
+                move_start_right: (1.0),
+                move_duration: None,
+                move_strategy: Instant,
+            ),
+        ],
+        cursor: Some((1, [
+            129811,
+        ])),
+        markers: {},
+        focused_item: Some((1)),
+        focused_transaction: (None, None),
+        selected_items: [],
+        default_variable_name_type: Unique,
+        scroll_offset: 0.0,
+        display_variable_indices: true,
+        graphics: {},
+    )),
+    drag_started: false,
+    drag_source_idx: None,
+    drag_target_idx: None,
+    previous_waves: None,
+    count: None,
+    blacklisted_translators: [],
+    show_about: false,
+    show_keys: false,
+    show_gestures: false,
+    show_quick_start: false,
+    show_license: false,
+    show_performance: false,
+    show_logs: false,
+    show_cursor_window: false,
+    wanted_timeunit: PicoSeconds,
+    time_string_format: None,
+    show_url_entry: false,
+    variable_name_filter_focused: false,
+    variable_name_filter_type: Fuzzy,
+    variable_name_filter_case_insensitive: true,
+    rename_target: None,
+    sidepanel_width: Some(300.0),
+    ui_zoom_factor: None,
+)
