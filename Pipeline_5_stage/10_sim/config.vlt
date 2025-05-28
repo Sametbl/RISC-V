@@ -1,0 +1,4 @@
+`verilator_config
+lint_off -file "../00_src/include/aqua_pkg.sv"
+lint_off -file "../00_src/include/riscv_pkg.sv"
+
