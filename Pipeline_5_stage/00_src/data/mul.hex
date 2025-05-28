@@ -1,0 +1,9 @@
+93 00 10 06   #  START: ADDI x1, x0, 97     # R1 = A = 98
+13 01 70 01   #         ADDI x2, x0, 23     # R2 = B = 63
+93 01 00 00   #         ADDI x3, x0, 0      # R3 = RESULT = 0 
+63 8A 00 00   #         BEQ  x1, x0, DONE  # If R1 == 0 || R2 == 0  Then R3 = 0
+63 08 01 00   #         BEQ  x2, x0, DONE  
+B3 81 11 00   #  LOOP:  ADD  x3, x3, x1      # RESULT = RESULT + A
+13 01 F1 FF   #         ADDI x2, x2, -1      # R2 = R2 - 1  
+E3 1C 01 FE   #         BNE  x2, x0,  LOOP   # If B != 0, repeat LOOP
+37 D0 EA 0D   #  DONE:  LUI  x0, 0xDEAD
